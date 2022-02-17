@@ -4,7 +4,7 @@
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Deployment](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/Build%20and%20Deploy?style=for-the-badge&logo=githubactions)](https://mattborghi.github.io/react-redux-intro) | [![Tests](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/CRA%20CI?style=for-the-badge&logo=testinglibrary)](https://github.com/mattborghi/react-redux-intro/actions/workflows/Tests.yml) |
 
-## Redux
+# Redux
 
 **Redux** adopted a handful of constraints from the Flux architecture but not all of them. It has **Actions** that encapsulate information about the state update. It has a **Store** to save the state, too. However, the Store is a _singleton_. Thus, there are not multiple Stores like there used to be in the Flux architecture.
 In addition, there is no single Dispatcher. Instead, Redux uses multiple **Reducers**. Basically, Reducers pick up the information from Actions and “reduce” it to a new state that is saved in the Store. When state in the Store is changed, the **View** can act on this by subscribing to the Store.
@@ -16,7 +16,7 @@ should be imaginable now. The state doesn’t live in the View anymore, it is on
 The View, in this case, would be React, but Redux could be used with any other library or standalone.
 After all, it is only a state management container.
 
-### Actions
+## Actions
 
 An action in Redux is a JavaScript object. It has a type and an optional payload. The type is often
 referred to as action type. While the type is a string literal, the payload can be anything.
@@ -33,7 +33,7 @@ For instance, the following action in this application can be used to add a new 
 Executing an action is called to _dispatch_ in Redux. You can **dispatch an action to alter the state in the Redux store**. You only dispatch when you want to change the state. The dispatch of an action can be triggered in your view layer. It could be as simple as a click on a button.
 In addition, the **payload in a Redux action is not mandatory**. You can define actions that have only an action type. So once an action is dispatched, it will come by all reducers in Redux.
 
-### Reducers
+## Reducers
 
 A reducer is the next part in the chain of the unidirectional data flow. The view dispatches an action and the action object, with action type and optional payload, will pass through all reducers.
 What’s a reducer? A **reducer is a pure function**. It always produces the same output when the input stays the same. It has _no side-effects_, thus it is only an input/output operation.
@@ -118,7 +118,7 @@ mutating the old object. `Object.assign()` merges all given objects from the for
 
 Notice that these functionalities, actions and reducer, are plain JavaScript. There is no function from the Redux library involved by now. There is no hidden library magic. It is plain JavaScript with functional programming principles in mind.
 
-### Store
+## Store
 
 - Who delegates the actions to the reducer?
 - Who triggers actions?
@@ -164,6 +164,7 @@ const unsubscribe = store.subscribe(() => {
 unsubscribe();
 ```
 
+> Keep reading in the [Wiki](https://github.com/mattborghi/react-redux-intro/wiki/)!
 ## Available Scripts
 
 In the project directory, you can run:
@@ -180,3 +181,7 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+```
+
+```
