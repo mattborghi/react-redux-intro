@@ -1,5 +1,6 @@
 {
   "name": "redux-test",
+  "homepage": "https://mattborghi.github.io/react-redux-intro/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
