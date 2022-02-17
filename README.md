@@ -1,5 +1,26 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Redux
+
+**Redux** adopted a handful of constraints from the Flux architecture but not all of them. It has **Actions**
+that encapsulate information about the state update. It has a **Store** to save the state, too. However, the
+Store is a _singleton_. Thus, there are not multiple Stores like there used to be in the Flux architecture.
+In addition, there is no single Dispatcher. Instead, Redux uses multiple **Reducers**. Basically, Reducers
+pick up the information from Actions and “reduce” it to a new state that is saved in the Store. When
+state in the Store is changed, the **View** can act on this by subscribing to the Store.
+
+![redux](./assets/img/redux.png)
+
+Why is it called Redux? Because it combines the two words Reducer and Flux. The abstract picture
+should be imaginable now. The state doesn’t live in the View anymore, it is only connected to
+the View. What does connected mean? It is connected on two ends, because it is part of the
+unidirectional data flow. One end is responsible to trigger an Action to update the state, the second
+end is responsible to receive the state from the Store. The View can update according to state changes
+and can trigger state changes.
+The View, in this case, would be React, but Redux could be used with any other library or standalone.
+After all, it is only a state management container.
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -16,29 +37,3 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
