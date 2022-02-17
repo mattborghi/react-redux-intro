@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
+| **Deployment** |**Testing** |
+|:------------ |:------------ |
+| [![Deployment](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/Build%20and%20Deploy?style=for-the-badge&logo=githubactions)](https://mattborghi.github.io/react-redux-intro) | [![Tests](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/CRA%20CI?style=for-the-badge&logo=testinglibrary)](https://github.com/mattborghi/react-redux-intro/actions/workflows/Tests.yml) |
 
 ## Redux
 
