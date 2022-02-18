@@ -4,6 +4,7 @@
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Deployment](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/Build%20and%20Deploy?style=for-the-badge&logo=githubactions)](https://mattborghi.github.io/react-redux-intro) | [![Tests](https://img.shields.io/github/workflow/status/mattborghi/react-redux-intro/CRA%20CI?style=for-the-badge&logo=testinglibrary)](https://github.com/mattborghi/react-redux-intro/actions/workflows/Tests.yml) |
 
+> These notes are based on the book [Taming the State in React](https://leanpub.com/taming-the-state-in-react) by Robin Wieruch.
 # Redux
 
 **Redux** adopted a handful of constraints from the Flux architecture but not all of them. It has **Actions** that encapsulate information about the state update. It has a **Store** to save the state, too. However, the Store is a _singleton_. Thus, there are not multiple Stores like there used to be in the Flux architecture.
