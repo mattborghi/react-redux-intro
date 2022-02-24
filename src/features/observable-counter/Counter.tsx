@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { selectCount, increment, decrement } from "../../app/store";
+import { selectCount, increment, decrement } from "./counterSlice";
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 export function Counter() {
